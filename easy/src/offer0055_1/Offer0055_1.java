@@ -1,4 +1,4 @@
-package offer0055;
+package offer0055_1;
 
 /**输入一棵二叉树的根节点，求该树的深度。
  * 从根节点到叶节点依次经过的节点（含根、叶节点）形成树的一条路径，
@@ -6,7 +6,7 @@ package offer0055;
  * @author sxx_27
  * @create 2022-05-06 19:25
  */
-public class Offer0055 {
+public class Offer0055_1 {
     public static void main(String[] args) {
 
     }
