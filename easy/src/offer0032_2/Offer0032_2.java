@@ -1,4 +1,4 @@
-package offer0032_1;
+package offer0032_2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
  * @author sxx_27
  * @create 2022-05-02 16:40
  */
-public class Offer0032 {
+public class Offer0032_2 {
 
     public static void main(String[] args) {
 
