@@ -9,24 +9,19 @@ package offer0056_2;
  */
 public class Offer0056_2 {
     public static void main(String[] args) {
-        new Solution().singleNumber(new int[]{1, 2, 3, 4, 5, 6, 6, 5, 4, 3, 2, 1, 1, 2, 3, 4, 5, 6, 7});
+        new Solution().singleNumber(new int[]{1, 2, 3, 3, 2, 1, 1, 2, 3, 7});
     }
 }
 
 class Solution {
     public int singleNumber(int[] nums) {
-        int[] arr = new int[32];
-        for (int num : nums) {
-            for (int i = 0; i < 32; i++) {
-                arr[i] += num & 1;
-                num >>= 1;
-            }
+        //a为对应位的1出现2次的记录，b为对应位出现1次的记录，ab共同组成该位出现的次数
+        int a = 0, b = 0;
+        for (int i : nums) {
+            b = ~a & (b ^ i);
+            a = ~b & (a ^ i);
         }
-        int res = 0;
-        for (int i = 0; i < 32; i++) {
-            res <<= 1;
-            res += arr[31 - i] % 3;
-        }
-        return res;
+        return b;
     }
+
 }
