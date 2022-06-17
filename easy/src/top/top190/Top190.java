@@ -18,12 +18,24 @@ public class Top190 {
         System.out.println(new Solution().reverseBits(111));
     }
 }
-public class Solution {
+class Solution {
     public int reverseBits(int n) {
-        int res = 0;
-        for (int i = 0; i <= 31; i++) {
-            res = res + ((1&n>>i)<<(31-i));
-        }
-        return res;
+
+        //分块掩码
+        //(0101 0101 0101 0101 0101 0101 0101 0101)
+        int M1 = 0x55555555;
+        //(0011 0011 0011 0011 0011 0011 0011 0011)
+        int M2 = 0x33333333;
+        //(0000 1111 0000 1111 0000 1111 0000 1111)
+        int M4 = 0x0F0F0F0F;
+        //(0000 0000 1111 1111 0000 0000 1111 1111)
+        int M8 = 0x00FF00FF;
+
+        n = ((n>>>1)&M1)|((n&M1)<<1);
+        n = ((n>>>2)&M2)|((n&M2)<<2);
+        n = ((n>>>4)&M4)|((n&M4)<<4);
+        n = ((n>>>8)&M8)|((n&M8)<<8);
+        n = (n>>>16)|(n<<16);
+        return n;
     }
 }
