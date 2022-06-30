@@ -1,4 +1,4 @@
-package top046;
+package top.top046;
 
 import java.util.*;
 
