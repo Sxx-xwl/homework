@@ -1,5 +1,3 @@
-package top;
-
 /**
  * @Classname TreeNode
  * @Version 1.0.0
