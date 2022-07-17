@@ -9,24 +9,22 @@ import java.util.Arrays;
  */
 public class Test {
     public static void main(String[] args) {
-        int arr[] = new int[36];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = (int) (Math.random() * (1000));
+        int[] arr1 = new int[34];
+        int[] arr2 = new int[34];
+        int[] arr3 = new int[34];
+        for (int i = 0; i < arr1.length; i++) {
+            arr1[i] = (int) (Math.random() * (1000));
+            arr2[i] = (int) (Math.random() * (1000));
+            arr3[i] = (int) (Math.random() * (1000));
         }
-        System.out.println(Arrays.toString(new AllSort().sort1(arr)));
-        System.out.println(Arrays.toString(new AllSort().sort2(arr)));
 
-//        Test test = new Test();
-//        int i = 0;
-//        test.add(i);
-//        i = i++;
-//        System.out.println(i);
-//
-//    }
-//    void add(int i){
-//        i++;
+        System.out.println(Arrays.toString(new AllSort().sort1(arr1)));
+        System.out.println(Arrays.toString(new AllSort().sort2(arr2)));
+        new AllSort().sort3(arr3);
+        System.out.println(Arrays.toString(arr3));
     }
 }
+
 class AllSort {
     /**
      * @Description: 冒泡排序
@@ -59,18 +57,57 @@ class AllSort {
         int len = arr.length;
         boolean flag = true;
         for (int i = 0; i < len - 1; i++) {
-            for (int j = i+1; j < len; j++) {
+            for (int j = i + 1; j < len; j++) {
                 if (arr[j] < arr[index]) {
                     index = j;
                     flag = false;
                 }
             }
-            if (!flag){
+            if (!flag) {
                 exchange(arr, i, index);
                 flag = true;
             }
         }
         return arr;
+    }
+
+    /**
+     * @Description: 归并排序
+     * @Param: [arr]
+     * @return: int[]
+     * @Author: Sxx_xwl
+     * @Date: 2022/7/17_13:54
+     */
+    public void sort3(int[] arr) {
+        int[] temp = new int[arr.length];
+        merge(temp, arr, 0, arr.length - 1);
+    }
+
+    private void merge(int[] temp, int[] arr, int l, int r) {
+        if (l >= r) {
+            return;
+        }
+        int mid = l + (r - l) / 2;
+        int i = l, j = mid + 1, k = l;
+        merge(temp, arr, i, mid);
+        merge(temp, arr, j, r);
+        while (i <= mid && j <= r) {
+            if (arr[i] < arr[j]) {
+                temp[k++] = arr[i++];
+            } else {
+                temp[k++] = arr[j++];
+            }
+        }
+        while (i <= mid) {
+            temp[k++] = arr[i++];
+        }
+        while (j <= r) {
+            temp[k++] = arr[j++];
+        }
+        int p = l, q = r;
+        while (p <= r) {
+            arr[p] = temp[p++];
+        }
     }
 
     /**
