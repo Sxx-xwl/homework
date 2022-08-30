@@ -1,7 +1,5 @@
 package top.top215;
 
-import java.awt.font.TextAttribute;
-import java.util.PriorityQueue;
 import java.util.Random;
 
 /**
@@ -16,7 +14,7 @@ import java.util.Random;
  */
 public class Top215 {
     public static void main(String[] args) {
-
+        System.out.println("c");
     }
 }
 
