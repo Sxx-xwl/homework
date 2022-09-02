@@ -1,11 +1,8 @@
 package offer.offer0061;
 
-import sun.plugin2.util.BrowserType;
-
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.concurrent.TransferQueue;
 
 /**
  * 从若干副扑克牌中随机抽 5 张牌，
