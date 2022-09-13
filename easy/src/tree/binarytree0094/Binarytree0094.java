@@ -1,4 +1,4 @@
-package binarytree0094;
+package tree.binarytree0094;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +36,6 @@ class Solution {
     List<Integer> list = new ArrayList<>();
 
     public List<Integer> inorderTraversal(TreeNode root) {
-
         if (root == null) {
             return list;
         }
