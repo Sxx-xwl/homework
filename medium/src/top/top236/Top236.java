@@ -1,7 +1,5 @@
 package top.top236;
 
-import com.sun.source.tree.IfTree;
-
 /**
  * 给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。
  * 百度百科中最近公共祖先的定义为：
