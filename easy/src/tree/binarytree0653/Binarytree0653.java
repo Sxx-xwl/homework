@@ -1,4 +1,4 @@
-package tree.bianrytree0653;
+package tree.binarytree0653;
 
 
 import java.util.HashSet;
@@ -14,7 +14,7 @@ import java.util.Set;
  * @className tree.bianrytree0653
  * @create 2022-09-26-20:55
  */
-public class Bianrytree0653 {
+public class Binarytree0653 {
     public static void main(String[] args) {
 
         TreeNode root = new TreeNode(2, new TreeNode(1), new TreeNode(3));

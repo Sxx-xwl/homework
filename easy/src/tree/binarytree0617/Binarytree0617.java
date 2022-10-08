@@ -1,4 +1,4 @@
-package tree.binarytree617;
+package tree.binarytree0617;
 
 
 /**
@@ -17,7 +17,7 @@ package tree.binarytree617;
  * @className tree.binarytree617
  * @create 2022-09-23-21:08
  */
-public class Binarytree617 {
+public class Binarytree0617 {
     public static void main(String[] args) {
         StringBuilder stringBuilder = new StringBuilder();
         String str = "asdasd";
