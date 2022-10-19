@@ -1,4 +1,4 @@
-package test.test0507;
+package test.test507;
 
 /**
  * 对于一个正整数，
